@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_mobile.css') }}">
+    <title>Larksfield</title>
+
+</head>
+<body>
+
+<div class="block" id="view">
+    <div class="scrollView" id="views">
+        <h2>House Viewings</h2>
+        <table>
+            <tr>
+                <th>Delete</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Days left</th>
+            </tr>
+            {% for view in views %}
+            <tr>
+                <td><a href="/deleteViewing/{{view[0]}}">X</a></td>
+                <td>{{ view[1] }}</td>
+                <td>{{ view[2] }}</td>
+                <td>{{ view[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<div class="block" id="add">
+    <h2>Add viewing</h2>
+    <form action="/addViewing/" method="POST">
+        <input type="date" id="date" name="date">
+        <div class="buffer"></div>
+        <input type="time" id="appt" name="appt">
+        <div class="buffer"></div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="block" id="bin">
+    <h2>Bins</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Bin</th>
+            <th>Days Left</th>
+        </tr>
+        <tr>
+            <th>Refuse</th>
+            <td>{{ bins["Refuse"] }}</td>
+        </tr>
+        <tr>
+            <th>Recycling</th>
+            <td>{{ bins["Recycling"] }}</td>
+        </tr>
+        <tr>
+            <th>Food Waste</th>
+            <td>{{ bins["Food Waste"] }}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

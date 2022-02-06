@@ -1,0 +1,3 @@
+DO NOT DELETE
+.. Yet
+Deleting this deletes the directory which messes with locating the database direcotry

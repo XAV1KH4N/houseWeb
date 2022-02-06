@@ -1,0 +1,81 @@
+body {
+  font-family: Monaco, sans-serif;
+  background-color: #defffe;
+}
+
+.block {
+  margin-top: 35px;
+  display: inline-block;
+  text-align: center;
+  width: 525px;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  box-shadow: 1px 1px 5px #b5b5b5
+}
+
+#view {
+  float: left;
+  margin-left: 125px;
+  height: 550px;
+}
+
+#add {
+  float: right;
+  margin-right: 125px;
+  height: 260px;
+}
+
+#bin {
+  float: right;
+  margin-top: 15px;
+  margin-right: 125px;
+  height: 225px;
+}
+
+
+input {
+    margin : auto;
+    margin-bottom: 5px;
+    height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    text-indent: 8px;
+    outline: none;
+}
+
+button {
+  margin: auto;
+  display: block;
+  background-color: #43b6ce;
+  border: none;
+  border-bottom: 2px solid #dbdbdb;
+  color: white;
+  width: 300px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.scrollView {
+  margin-top: 10px;
+  overflow: auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
