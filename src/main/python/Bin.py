@@ -1,6 +1,4 @@
 import datetime
-import requests as req
-
 
 class Bin:
     def __init__(self):

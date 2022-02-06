@@ -1,8 +1,10 @@
 from datetime import datetime, date
 from flask import Flask, render_template, request, url_for, redirect, flash
 
-from src.main.python.Bin import Bin
-from src.main.python.View import View
+#from main.python.Bin import Bin
+#from main.python.View import View
+import Bin
+import View
 
 app = Flask(__name__)
 
@@ -14,7 +16,7 @@ def index():
 
 @app.route('/addViewing/', methods=['POST', 'GET'])
 def addViewing():
-    view = View()
+    view = View.View()
     if request.method == "POST":
         date = request.form["date"]
         time = request.form["appt"]
@@ -25,14 +27,14 @@ def addViewing():
 
 @app.route('/deleteViewing/<int:id>', methods=['POST', 'GET'])
 def deleteViewing(id):
-    view = View()
+    view = View.View()
     view.deleteViewing(id)
     view.close()
     return render_template('index.html', views=getViews(), bins=getBins())
 
 
 def getBins():
-    bin = Bin()
+    bin = Bin.Bin()
     data = bin.nextBins()
     for bin in data:
         if data[bin] == 0:
@@ -43,7 +45,7 @@ def getBins():
 
 
 def getViews():
-    view = View()
+    view = View.View()
     views = []
     for item in view.getViewings():
         time = countDown(item[1])
