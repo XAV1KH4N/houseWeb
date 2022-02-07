@@ -1,8 +1,6 @@
 from datetime import datetime, date
 from flask import Flask, render_template, request, url_for, redirect, flash
 
-#from main.python.Bin import Bin
-#from main.python.View import View
 import Bin
 import View
 
