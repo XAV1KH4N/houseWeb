@@ -2,7 +2,7 @@ import sqlite3
 
 
 def connect():
-    address = "../resources/Database.db"
+    address = "/home/xavi/websites/houseWeb/src/main/resources/Database.db"
     conn = sqlite3.connect(address)
     cursor = conn.cursor()
 
