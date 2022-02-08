@@ -3,7 +3,7 @@ import sqlite3
 
 class View:
     def __init__(self):
-        address = "../resources/Database.db"
+        address = "/home/xavi/websites/houseWeb/src/main/resources/Database.db"
         self.conn = sqlite3.connect(address)
         self.cursor = self.conn.cursor()
         self.createTables()
